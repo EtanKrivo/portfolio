@@ -52,14 +52,8 @@
               </div>
             </div>
             <div class="cell" style="--l:5.34%; --w:42.38%; --t:6.25%">
-              <div class="stack">
-                <div class="cell" style="--l:0%; --w:100%">
-                  <figure class="img"><img src="assets/img/masp/masp-01.jpg" width="830" height="567" loading="lazy" alt=""></figure>
-                </div>
-                <div class="cell" style="--l:0%; --w:100%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 1: MASP building street view</p></div>
-                </div>
-              </div>
+              <figure class="img"><img src="assets/img/masp/masp-01.jpg" width="830" height="567" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 1: MASP building street view</p></div>
             </div>
           </div>
         </div>
@@ -67,20 +61,16 @@
           <div class="row">
             <div class="cell" style="--l:0%; --w:31.59%">
               <figure class="img"><img src="assets/img/masp/masp-02.jpg" width="694" height="942" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 2: Masp 3D exploded layout</p></div>
             </div>
             <div class="cell" style="--l:3.65%; --w:24.76%">
               <figure class="img"><img src="assets/img/masp/masp-03.jpg" width="472" height="814" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 3: Column dimensions</p></div>
             </div>
             <div class="cell" style="--l:10.63%; --w:29.37%">
               <div class="text body a-justify"><p>The design domain for the proposed columns is modeled based on these dimensions. For this analysis, I am only considering the volume above the foundation. The shaded part of the column represents structural concrete, with the lower half of the section being hollow and the top half being filled in with non structural concrete. The two beams acting on the column will represent loads with the top of the foundation acting as a fixed support.</p></div>
             </div>
           </div>
-        </div>
-        <div class="cell" style="--l:14.95%; --w:25.64%; --t:0%">
-          <div class="text caption a-center"><p>Figure 2: Masp 3D exploded layout</p></div>
-        </div>
-        <div class="cell" style="--l:45.36%; --w:20.10%; --t:0%">
-          <div class="text caption a-center"><p>Figure 3: Column dimensions</p></div>
         </div>
         <div class="cell" style="--l:16.11%; --w:79.90%; --t:0%">
           <div class="row">
@@ -95,14 +85,8 @@
               </div>
             </div>
             <div class="cell" style="--l:5.32%; --w:46.77%">
-              <div class="stack">
-                <div class="cell" style="--l:0%; --w:100%">
-                  <figure class="img"><img src="assets/img/masp/masp-04.jpg" width="920" height="657" loading="lazy" alt=""></figure>
-                </div>
-                <div class="cell" style="--l:24.48%; --w:53.79%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 4: Boundary condition 1</p></div>
-                </div>
-              </div>
+              <figure class="img"><img src="assets/img/masp/masp-04.jpg" width="920" height="657" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 4: Boundary condition 1</p></div>
             </div>
           </div>
         </div>
@@ -119,12 +103,14 @@
               </div>
             </div>
             <div class="cell" style="--l:7.46%; --w:45.24%">
-              <figure class="img"><img src="assets/img/masp/masp-05.jpg" width="916" height="720" loading="lazy" alt=""><span class="label" style="left:19.65%; top:91.52%; width:54.74%">Figure 5: Boundary condition 2</span></figure>
+              <figure class="img"><img src="assets/img/masp/masp-05.jpg" width="916" height="720" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 5: Boundary condition 2</p></div>
             </div>
           </div>
         </div>
         <div class="cell" style="--l:0%; --w:99.10%; --t:2.84%">
-          <figure class="img"><img src="assets/img/masp/masp-06.jpg" width="3495" height="923" loading="lazy" alt=""><span class="label" style="left:37.06%; top:91.13%; width:25.75%">Figure 6: Topos script in Grasshopper</span></figure>
+          <figure class="img"><img src="assets/img/masp/masp-06.jpg" width="3495" height="923" loading="lazy" alt=""></figure>
+          <div class="text fig-caption caption a-center"><p>Figure 6: Topos script in Grasshopper</p></div>
         </div>
         <div class="cell" style="--l:7.73%; --w:83.38%; --t:2.84%">
           <div class="table-wrap"><table class="data">
@@ -137,32 +123,28 @@
           <div class="text body a-justify"><p><strong>The four main columns will be redesigned using a SIMP based approach using the Topos plugin in Grasshopper. Topos is a 3D topology optimization plugin which uses the GPU for computational acceleration and is based on CUDA technology provided by NVIDIA, meaning a NVIDIA graphics card is needed to run the plugin. Since Topos uses the SIMP based approach, the objective function is to minimize structural compliance subject to the volume constraint and the design variables. </strong></p></div>
         </div>
         <div class="cell" style="--l:11.86%; --w:80.03%; --t:0%">
-          <div class="row">
+          <div class="row phone-reorder">
             <div class="cell" style="--l:0%; --w:51.85%; --t:1.45%">
               <div class="stack">
-                <div class="cell" style="--l:0%; --w:91.30%">
+                <div class="cell" style="--l:0%; --w:91.30%; --o:0">
                   <h2 class="section-title a-left">4. Results</h2>
                 </div>
-                <div class="cell" style="--l:10.25%; --w:89.75%; --t:3.73%">
+                <div class="cell" style="--l:10.25%; --w:89.75%; --t:3.73%; --o:1">
                   <div class="text body a-justify"><p>Figure 7 shows the optimized column design given the domain of the column featured in the MASP building. Since pressure 1 is so much larger than pressure 3, the majority of the stresses and material were focused around the console rather than the roof. Furthermore, it can be seen why a lower hollow cross section segment and thin upper segment were used for the original column as the results show that material is not actually necessary for those regions.</p></div>
                 </div>
-                <div class="cell" style="--l:10.25%; --w:85.71%; --t:4.04%">
+                <div class="cell" style="--l:10.25%; --w:85.71%; --t:4.04%; --o:3">
                   <figure class="img"><img src="assets/img/masp/masp-08.jpg" width="766" height="719" loading="lazy" alt=""></figure>
-                </div>
-                <div class="cell" style="--l:20.19%; --w:61.49%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 8: Optimized column 2</p></div>
+                  <div class="text fig-caption caption a-center"><p>Figure 8: Optimized column 2</p></div>
                 </div>
               </div>
             </div>
             <div class="cell" style="--l:2.50%; --w:45.65%">
               <div class="stack">
-                <div class="cell" style="--l:0%; --w:100%">
+                <div class="cell" style="--l:0%; --w:100%; --o:2">
                   <figure class="img"><img src="assets/img/masp/masp-07.jpg" width="763" height="794" loading="lazy" alt=""></figure>
+                  <div class="text fig-caption caption a-center"><p>Figure 7: Optimized column 1</p></div>
                 </div>
-                <div class="cell" style="--l:13.57%; --w:69.85%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 7: Optimized column 1</p></div>
-                </div>
-                <div class="cell" style="--l:0.52%; --w:86.43%; --t:8.82%">
+                <div class="cell" style="--l:0.52%; --w:86.43%; --t:8.82%; --o:4">
                   <div class="text body a-justify"><p><strong>Figure 8 shows the optimized design domain given boundary conditions 2 which were meant to highlight a design alternative where the console length is extended from 1.5 meters to 10 meters allowing for the pressures to be more balanced, which is why there is a visually equal amount of material assigned to both regions. </strong></p></div>
                 </div>
               </div>
@@ -187,32 +169,18 @@
         <div class="cell" style="--l:11.86%; --w:80.15%; --t:4.12%">
           <div class="row">
             <div class="cell" style="--l:0%; --w:47.75%">
-              <div class="stack">
-                <div class="cell" style="--l:0%; --w:100%">
-                  <figure class="img"><img src="assets/img/masp/masp-09.jpg" width="1077" height="794" loading="lazy" alt=""></figure>
-                </div>
-                <div class="cell" style="--l:16.50%; --w:66.67%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 9: MASP aerial render</p></div>
-                </div>
-              </div>
+              <figure class="img"><img src="assets/img/masp/masp-09.jpg" width="1077" height="794" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 9: MASP aerial render</p></div>
             </div>
             <div class="cell" style="--l:4.50%; --w:47.75%">
-              <div class="stack">
-                <div class="cell" style="--l:0%; --w:100%">
-                  <figure class="img"><img src="assets/img/masp/masp-10.jpg" width="1076" height="794" loading="lazy" alt=""></figure>
-                </div>
-                <div class="cell" style="--l:16.50%; --w:66.67%; --t:0%">
-                  <div class="text caption a-center"><p>Figure 10: MASP street render</p></div>
-                </div>
-              </div>
+              <figure class="img"><img src="assets/img/masp/masp-10.jpg" width="1076" height="794" loading="lazy" alt=""></figure>
+              <div class="text fig-caption caption a-center"><p>Figure 10: MASP street render</p></div>
             </div>
           </div>
         </div>
         <div class="cell" style="--l:33.12%; --w:37.63%; --t:4.77%">
           <figure class="img"><img src="assets/img/masp/masp-11.jpg" width="2880" height="2160" loading="lazy" alt=""></figure>
-        </div>
-        <div class="cell" style="--l:39.18%; --w:25.52%; --t:0%">
-          <div class="text caption a-center"><p>Figure 11: 3D printed columns</p></div>
+          <div class="text fig-caption caption a-center"><p>Figure 11: 3D printed columns</p></div>
         </div>
       </div>
       </section>

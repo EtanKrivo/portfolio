@@ -207,6 +207,7 @@ main {
 .text p { margin: 0; }
 .text p.gap { height: .8em; }
 .text.caption { font-size: .85em; line-height: 1.45; color: #555; }
+.text.fig-caption { margin-top: 6px; }   /* "Figure N" caption kept with its picture */
 .text.lead { font-size: 1.08em; }
 .text strong { font-weight: 700; }
 /* image + text pairs: trim the line spacing above the first / below the last line
@@ -578,4 +579,27 @@ footer {
   .cv-row > :last-child { text-align: left; }
   .cv-entry, .cv-skill { margin-left: 0; }
   .cv-contact { margin-top: -10px; }
+}
+
+@media (max-width: 760px) {
+  /* photography on phones: drop the column wrappers so every group lines up in one list,
+     ordered (by the generator, --o) to keep each place's groups together */
+  .p-photography { display: flex; flex-direction: column; }
+  .p-photography .row,
+  .p-photography .stack,
+  .p-photography .cell:has(> .row),
+  .p-photography .cell:has(> .stack) { display: contents; }
+  .p-photography .cell { order: var(--o, 0); }
+  .p-photography .stack > .cell:has(> .slideshow) { margin-top: 22px; }
+  .p-photography .stack > .cell:has(> .text.caption) { margin-top: 8px; }
+  .p-photography .stack > .cell[style*="--o:0;"], .p-photography .stack > .cell[style$="--o:0"] { margin-top: 0; }
+}
+
+@media (max-width: 760px) {
+  /* two-column blocks with a phone-only reading order (set per widget by the generator, --o) */
+  .row.phone-reorder { display: flex; flex-direction: column; }
+  .row.phone-reorder > .cell,
+  .row.phone-reorder .stack { display: contents; }
+  .row.phone-reorder .cell { order: var(--o, 99); margin-top: 16px; }
+  .row.phone-reorder .cell[style*="--o:0"] { margin-top: 0; }
 }
