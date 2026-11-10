@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etan Krivorot - MASP Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="project-page">
+  <div class="site">
+    <aside class="sidebar">
+      <a class="logo" href="index.html">Etan <br>Krivorot</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav>
+      <ul class="pages">
+        <li class="page-title"><a href="about.html">About</a></li>
+        <li class="page-title"><a href="cv.html">Curriculum Vitae</a></li>
+        <li class="page-title"><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="gallery-title"><a href="index.html">Projects</a></p>
+      <ul class="projects">
+        <li><a href="viking-chairs.html">Viking Chairs</a></li>
+        <li><a href="gcode-shade.html">G-Code Shade</a></li>
+        <li><a href="uhpc-beam.html">UHPC Beam</a></li>
+        <li><a href="3d-printed-shelf.html">3D Printed Shelf</a></li>
+        <li><a href="masp-redesign.html" class="active">MASP Redesign</a></li>
+        <li><a href="cube.html">Cube</a></li>
+        <li><a href="reusable-gazebo.html">Reusable Gazebo</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+      </nav>
+    </aside>
+    <main>
+      <header class="page-header">
+        <h1>Structural Redesign of the<br>São Paolo Musuem of Art Building<br>Using Topology Optimization</h1><p class="subtitle">A Structural Design Optimization Course Project</p>
+      </header>
+      <section class="content project p-masp">
+      <div class="stack">
+        <div class="cell" style="--l:15.46%; --w:84.54%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:52.29%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:75.51%">
+                  <h2 class="section-title a-left">1. Background</h2>
+                </div>
+                <div class="cell" style="--l:7.58%; --w:92.42%; --t:0%">
+                  <div class="text body a-justify"><p>The São Paulo Museum of Art (MASP) building is built using four concrete columns supporting four prestressed concrete beams that support both floors of the gallery. The structural analysis and construction process can be found from the paper “Construction of the museu de arte de são paulo” by Gabriela Campagnol and Stephen Caffey and member dimensions can be found from the document “MASP’s Structure Conservation Plan”. This project focuses on redesigning the columns with two objectives, minimizing material usage and optimizing for mechanical strength.<br></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:5.34%; --w:42.38%; --t:6.25%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/masp/masp-01.jpg" width="830" height="567" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:0%; --w:100%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 1: MASP building street view</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:14.82%; --w:81.19%; --t:3.48%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:31.59%">
+              <figure class="img"><img src="assets/img/masp/masp-02.jpg" width="694" height="942" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:3.65%; --w:24.76%">
+              <figure class="img"><img src="assets/img/masp/masp-03.jpg" width="472" height="814" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:10.63%; --w:29.37%">
+              <div class="text body a-justify"><p>The design domain for the proposed columns is modeled based on these dimensions. For this analysis, I am only considering the volume above the foundation. The shaded part of the column represents structural concrete, with the lower half of the section being hollow and the top half being filled in with non structural concrete. The two beams acting on the column will represent loads with the top of the foundation acting as a fixed support.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:14.95%; --w:25.64%; --t:0%">
+          <div class="text caption a-center"><p>Figure 2: Masp 3D exploded layout</p></div>
+        </div>
+        <div class="cell" style="--l:45.36%; --w:20.10%; --t:0%">
+          <div class="text caption a-center"><p>Figure 3: Column dimensions</p></div>
+        </div>
+        <div class="cell" style="--l:16.11%; --w:79.90%; --t:0%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:47.90%; --t:6.13%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:98.99%">
+                  <h2 class="section-title a-left">2. Boundary Conditions</h2>
+                </div>
+                <div class="cell" style="--l:10.44%; --w:89.56%; --t:5.05%">
+                  <div class="text body a-justify"><p><strong>Two boundary conditions are chosen. One is made from volume, loading, and supports used from the original column. The second boundary condition is made to better support the lower beam by extending the console support area from 3.75 m</strong><sup><strong>2</strong></sup><strong> to 25 m</strong><sup><strong>2</strong></sup><strong> while expanding the volume to cover all space below as well. </strong></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:5.32%; --w:46.77%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/masp/masp-04.jpg" width="920" height="657" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:24.48%; --w:53.79%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 4: Boundary condition 1</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:16.11%; --w:81.19%; --t:0.64%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:47.30%; --t:3.97%">
+              <div class="stack">
+                <div class="cell" style="--l:10.40%; --w:89.60%">
+                  <div class="text body a-justify"><p><strong>Using the beam dimensions, cross sectional areas, and assuming normal density concrete (24kN/m</strong><sup><strong>3</strong></sup><strong>): </strong></p><p><strong>- Roof beam: 5672.16 kN</strong></p><p><strong>- Floor beam: 7509.6 kN</strong></p><p><strong>- Pressure 1: (7509.6 / 2)/ 3.75 = 1001.28 kN/m</strong><sup><strong>2</strong></sup></p><p><strong>- Pressure 2: (7509.6 / 2)/ 25 = 150.2 kN/m</strong><sup><strong>2</strong></sup></p><p><strong>- Pressure 3: (5672.16 / 2) / 10 = 283.6 kN/m</strong><sup><strong>2</strong></sup></p></div>
+                </div>
+                <div class="cell" style="--l:0%; --w:98.66%; --t:15.77%">
+                  <h2 class="section-title a-left">3. Optimization</h2>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:7.46%; --w:45.24%">
+              <figure class="img"><img src="assets/img/masp/masp-05.jpg" width="916" height="720" loading="lazy" alt=""><span class="label" style="left:19.65%; top:91.52%; width:54.74%">Figure 5: Boundary condition 2</span></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:0%; --w:99.10%; --t:2.84%">
+          <figure class="img"><img src="assets/img/masp/masp-06.jpg" width="3495" height="923" loading="lazy" alt=""><span class="label" style="left:37.06%; top:91.13%; width:25.75%">Figure 6: Topos script in Grasshopper</span></figure>
+        </div>
+        <div class="cell" style="--l:7.73%; --w:83.38%; --t:2.84%">
+          <div class="table-wrap"><table class="data">
+<caption><strong>Table 1: Parameters used</strong></caption>
+<tr><th><strong>Young Modulus</strong></th><th><strong>Poisson Number</strong></th><th><strong>Resolution</strong></th><th><strong>Iterations</strong></th><th><strong>Volume Fraction</strong></th><th><strong>Penalty</strong></th><th><strong>Change</strong></th><th><strong>Sensitivity Radius</strong></th></tr>
+<tr><td><strong>50 GPa</strong></td><td><strong>0.2</strong></td><td><strong>0.1</strong></td><td><strong>30</strong></td><td><strong>0.35</strong></td><td><strong>2</strong></td><td><strong>0.05</strong></td><td><strong>1.5</strong></td></tr>
+</table></div>
+        </div>
+        <div class="cell" style="--l:6.96%; --w:84.92%; --t:2.97%">
+          <div class="text body a-justify"><p><strong>The four main columns will be redesigned using a SIMP based approach using the Topos plugin in Grasshopper. Topos is a 3D topology optimization plugin which uses the GPU for computational acceleration and is based on CUDA technology provided by NVIDIA, meaning a NVIDIA graphics card is needed to run the plugin. Since Topos uses the SIMP based approach, the objective function is to minimize structural compliance subject to the volume constraint and the design variables. </strong></p></div>
+        </div>
+        <div class="cell" style="--l:11.86%; --w:80.03%; --t:0%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:51.85%; --t:1.45%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:91.30%">
+                  <h2 class="section-title a-left">4. Results</h2>
+                </div>
+                <div class="cell" style="--l:10.25%; --w:89.75%; --t:3.73%">
+                  <div class="text body a-justify"><p>Figure 7 shows the optimized column design given the domain of the column featured in the MASP building. Since pressure 1 is so much larger than pressure 3, the majority of the stresses and material were focused around the console rather than the roof. Furthermore, it can be seen why a lower hollow cross section segment and thin upper segment were used for the original column as the results show that material is not actually necessary for those regions.</p></div>
+                </div>
+                <div class="cell" style="--l:10.25%; --w:85.71%; --t:4.04%">
+                  <figure class="img"><img src="assets/img/masp/masp-08.jpg" width="766" height="719" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:20.19%; --w:61.49%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 8: Optimized column 2</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:45.65%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/masp/masp-07.jpg" width="763" height="794" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:13.57%; --w:69.85%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 7: Optimized column 1</p></div>
+                </div>
+                <div class="cell" style="--l:0.52%; --w:86.43%; --t:8.82%">
+                  <div class="text body a-justify"><p><strong>Figure 8 shows the optimized design domain given boundary conditions 2 which were meant to highlight a design alternative where the console length is extended from 1.5 meters to 10 meters allowing for the pressures to be more balanced, which is why there is a visually equal amount of material assigned to both regions. </strong></p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:11.86%; --w:76.68%; --t:1.29%">
+          <div class="table-wrap"><table class="data">
+<caption><strong>Table 2: Topology optimization results</strong></caption>
+<tr><th></th><th><strong>Volume (m3)</strong></th><th><strong>Max Compressive Stress (MPa)</strong></th><th><strong>Max Tensile Stress (MPa)</strong></th></tr>
+<tr><td><strong>Initial Column</strong></td><td><strong>210.31</strong></td><td><strong>127.21</strong></td><td><strong>270.18</strong></td></tr>
+<tr><td><strong>Optimized Column 1</strong></td><td><strong>92.31</strong></td><td><strong>127.21</strong></td><td><strong>270.18</strong></td></tr>
+<tr><td><strong>Optimized Column 2</strong></td><td><strong>197.31</strong></td><td><strong>34.90</strong></td><td><strong>115.34</strong></td></tr>
+</table></div>
+        </div>
+        <div class="cell" style="--l:11.86%; --w:76.55%; --t:3.09%">
+          <div class="text body a-justify"><p><strong>Column 1, as seen in figure 7, has a volume that is 56% lower than the original column,while maintaining the same compressive and tensile stresses as the original column. While column 2, as seen in figure 8, has a volume 6.2% lower with a 72.6% and a 57.3% decrease in maximum compressive and tensile stresses respectively. For industry applications the optimal selection of which solution to pick depends on what the objective of the optimization is. If the goal is to reduce material usage as much as possible, then column 1 is good. If the goal is to create a more strengthened structure then column 2 is preferable. </strong></p></div>
+        </div>
+        <div class="cell" style="--l:11.86%; --w:42.65%; --t:4.12%">
+          <h2 class="section-title a-left">5. Renders and Fabrication</h2>
+        </div>
+        <div class="cell" style="--l:11.86%; --w:80.15%; --t:4.12%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:47.75%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/masp/masp-09.jpg" width="1077" height="794" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:16.50%; --w:66.67%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 9: MASP aerial render</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:4.50%; --w:47.75%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/masp/masp-10.jpg" width="1076" height="794" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:16.50%; --w:66.67%; --t:0%">
+                  <div class="text caption a-center"><p>Figure 10: MASP street render</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:33.12%; --w:37.63%; --t:4.77%">
+          <figure class="img"><img src="assets/img/masp/masp-11.jpg" width="2880" height="2160" loading="lazy" alt=""></figure>
+        </div>
+        <div class="cell" style="--l:39.18%; --w:25.52%; --t:0%">
+          <div class="text caption a-center"><p>Figure 11: 3D printed columns</p></div>
+        </div>
+      </div>
+      </section>
+      <footer><a href="#top" class="back-to-top">&uarr; Back to Top</a></footer>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

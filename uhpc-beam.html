@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etan Krivorot - UHPC Beam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="project-page">
+  <div class="site">
+    <aside class="sidebar">
+      <a class="logo" href="index.html">Etan <br>Krivorot</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav>
+      <ul class="pages">
+        <li class="page-title"><a href="about.html">About</a></li>
+        <li class="page-title"><a href="cv.html">Curriculum Vitae</a></li>
+        <li class="page-title"><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="gallery-title"><a href="index.html">Projects</a></p>
+      <ul class="projects">
+        <li><a href="viking-chairs.html">Viking Chairs</a></li>
+        <li><a href="gcode-shade.html">G-Code Shade</a></li>
+        <li><a href="uhpc-beam.html" class="active">UHPC Beam</a></li>
+        <li><a href="3d-printed-shelf.html">3D Printed Shelf</a></li>
+        <li><a href="masp-redesign.html">MASP Redesign</a></li>
+        <li><a href="cube.html">Cube</a></li>
+        <li><a href="reusable-gazebo.html">Reusable Gazebo</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+      </nav>
+    </aside>
+    <main>
+      <header class="page-header">
+        <h1>Ultra High Performance Concrete Beam<br>Using Topology Optimization<br>For Three Point Bending</h1><p class="subtitle">An Engineering Student Design Competition Submission</p><p class="subtitle">With Sean Szabo</p>
+      </header>
+      <section class="content project p-uhpc">
+      <div class="stack">
+        <div class="cell" style="--l:14%; --w:72%">
+          <figure class="img"><img src="assets/img/uhpc/uhpc-header-render.jpg" width="1478" height="328" loading="lazy" alt=""></figure>
+        </div>
+        <div class="cell" style="--l:0%; --w:100%; --t:7.41%">
+          <div class="row pair match-h">
+            <div class="cell" style="--l:20.73%; --w:34.69%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-02.jpg" width="3700" height="2268" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:3.22%; --w:34.05%">
+              <div class="text body a-justify"><p>The Fourth International Interactive Symposium on Ultra-High Performance Concrete (4IIS-UHPC) called on student teams to design a concrete beam for three point bending, with the added criteria that it must fail at a specific ultimate load of 71.2 kN (16 kips). Our approach was to design a beam with the least amount of material needed to reach the ultimate load. The top most part of the beam was designed to bear the maximum compressive stresses while the bottom of the beam carried all the tensile stresses and was engineered to experience a ductile failure mode when the ultimate load was reached.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:25.67%; --w:37.81%; --t:4.73%">
+          <h2 class="section-title a-left">1. Topology Optimization</h2>
+        </div>
+        <div class="cell" style="--l:14.39%; --w:74.22%; --t:0%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:69.46%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-03.jpg" width="1578" height="794" loading="lazy" alt=""><span class="rule" style="left:61.44%; top:26.18%; width:9.75%; height:9.94%; --c:#000000; --a:-38deg"></span><span class="label" style="left:63.12%; top:18.14%; width:18.38%">Design Domain</span><span class="rule" style="left:36.86%; top:22.42%; width:9.75%; height:9.94%; --c:#000000; --a:-142deg"></span><span class="label" style="left:34.38%; top:13.72%; width:7.60%">Load</span><span class="rule" style="left:40.57%; top:79.62%; width:26.09%; height:9.94%; --c:#000000; --a:-8deg"></span><span class="rule" style="left:22.28%; top:68.14%; width:9.75%; height:9.94%; --c:#000000; --a:-115deg"></span><span class="label" style="left:27.50%; top:87.03%; width:11.49%">Supports</span></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:28.04%; --t:12.16%">
+              <div class="text body a-justify"><p>Using the Topos plugin in Grasshopper, a topology optimization was done based on the design domain given to us from the competition. Since the Topos plugin runs a basic SIMP algorithm, only the compressive element of the beam was able to be generated, and thus we had to remodel the beam afterwards.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:1.18%; --w:94.84%; --t:1.77%">
+          <figure class="img"><img src="assets/img/uhpc/uhpc-script-topology.jpg" width="2000" height="579" loading="lazy" alt=""></figure>
+        </div>
+        <div class="cell" style="--l:6.44%; --w:84.10%; --t:0.11%">
+          <div class="table-wrap"><table class="data">
+<caption><strong>Parameters used</strong></caption>
+<tr><th><strong>Load</strong></th><th><strong>Supports</strong></th><th><strong>Young Modulus</strong></th><th><strong>Poisson Number</strong></th><th><strong>Resolution</strong></th><th><strong>Iterations</strong></th><th><strong>Volume Fraction</strong></th><th><strong>Penalty</strong></th><th><strong>Change</strong></th><th><strong>Sensitivity Radius</strong></th></tr>
+<tr><td><strong>71.2 kN</strong></td><td><strong>Pin-pin</strong></td><td><strong>50 GPa</strong></td><td><strong>0.2</strong></td><td><strong>3</strong></td><td><strong>30</strong></td><td><strong>0.10</strong></td><td><strong>2</strong></td><td><strong>0.05</strong></td><td><strong>1.5</strong></td></tr>
+</table></div>
+        </div>
+        <div class="cell" style="--l:15.15%; --w:66.81%; --t:5.80%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:48.23%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-05.jpg" width="824" height="431" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:29.67%; --w:40.67%; --t:3%">
+                  <div class="text body a-center"><p>Side view of TO beam</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:7.56%; --w:44.21%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-06.jpg" width="791" height="452" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:13.45%; --w:72.36%; --t:3.27%">
+                  <div class="text body a-center"><p>Cross section at the middle</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:20.41%; --w:56.50%; --t:3.33%">
+          <div class="text body a-justify"><p>The results pointed to a design with the shape of a triangular truss with a triangular cross section. Both elements were taken into consideration when modeling the final beam.</p></div>
+        </div>
+        <div class="cell" style="--l:18.58%; --w:37.81%; --t:6.55%">
+          <h2 class="section-title a-left">2. Beam Modeling</h2>
+        </div>
+        <div class="cell" style="--l:18.58%; --w:59.18%; --t:4.62%">
+          <div class="text body a-justify"><p><strong>Modeling was done using Grasshopper to create a computational script with parameters that can be modified to further optimize the design. The key inputs for the grasshopper script include the support footing dimensions, the proportions and area of the cross sections, the type of beam curvature, and the type of rebar used. The outputs are the UHPC element model and its dimensions. </strong></p></div>
+        </div>
+        <div class="cell" style="--l:3.54%; --w:95.92%; --t:4.30%">
+          <figure class="img"><img src="assets/img/uhpc/uhpc-script-beam.jpg" width="2000" height="415" loading="lazy" alt=""></figure>
+        </div>
+        <div class="cell" style="--l:13%; --w:71.21%; --t:2.69%">
+          <div class="text body a-justify"><p><strong>The parameters of focus are the cross-sectional area of the beam at the center and the type of curvatures to take into consideration. The first curvature is an arch, the third is a triangle truss shape, and the second is a mix of the two others. </strong></p></div>
+        </div>
+        <div class="cell" style="--l:18.90%; --w:64.02%; --t:1.83%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:43.96%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-08.jpg" width="861" height="794" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:53.54%; --t:6.38%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-09.jpg" width="1096" height="669" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:18.90%; --w:37.81%; --t:5.37%">
+          <h2 class="section-title a-left">3. Design calculations</h2>
+        </div>
+        <div class="cell" style="--l:22.88%; --w:51.56%; --t:3.65%">
+          <div class="text body a-justify"><p><strong>To determine an optimized cross-sectional area, analytical calculations are done using the moment of the beam. The following parameters are used: Load (P) = 71200 N, Span (L) = 864 mm, Depth (d) = 190 mm, Compressive strength (f&#x27;c) = 130 MPa, Rebar tensile strength (fy) = 400 MPa, and the rebar diameter (db), to solve for the compressive resistance (Cr), tensile resistance (Tr), Area concrete (Ac), Area steel (As), and the development length (ld).</strong></p></div>
+        </div>
+        <div class="cell" style="--l:22.88%; --w:51.56%; --t:2.15%">
+          <div class="text body a-justify"><p class="eq"><strong>M = P⋅L/2 = (71200 N)(864 mm)/2 = 30758400 Nmm</strong></p><p class="eq"><strong>Cr = Tr = M⋅d = (30758400 Nmm)(190 mm) = 161886.316 N</strong></p><p class="eq"><strong>Ac = Cr⋅f&#x27;c = (161886.316 N)(130 MPa) = 1245.23 mm</strong><sup><strong>2</strong></sup></p><p class="eq"><strong>As = Tr⋅fy = (161886.316 N)(400 MPa) = 404.716 mm</strong><sup><strong>2</strong></sup></p><p class="gap"></p><p><strong>Therefore, 4x10M longitudinal bars are selected, such that the provided</strong></p><p class="eq"><strong>As = 4(100 mm</strong><sup><strong>2</strong></sup><strong>) = 400 mm</strong><sup><strong>2</strong></sup>  <strong>and </strong> <strong>db=10 mm</strong></p><p class="gap"></p><p><strong>Since we would like to induce a tensile failure, the cross sectional area of concrete is selected to be 2000 mm</strong><sup><strong>2</strong></sup><strong>, providing a factor of safety of 1.6 against crushing.</strong></p><p class="gap"></p><p><strong>Using FHWA  guidelines, the minimum development length shall be taken as </strong></p><p class="eq"><strong>ld = 12 db = 12(10mm) = 120 mm</strong></p></div>
+        </div>
+        <div class="cell" style="--l:22.88%; --w:51.56%; --t:0%">
+          <div class="text body a-justify"><p><strong>The number of rebars and the cross sectional area of concrete were then inputed into the Grasshopper script and the beam shapes were then tested using a finite element analysis.</strong></p></div>
+        </div>
+        <div class="cell" style="--l:18.90%; --w:37.81%; --t:5.91%">
+          <h2 class="section-title a-left">4. Finite Element Analysis</h2>
+        </div>
+        <div class="cell" style="--l:22.88%; --w:51.56%; --t:4.40%">
+          <div class="text body a-justify"><p><strong>Fusion 360 is used to perform the FEA on each shape, assuming a pin-pin condition to only test the compressive part of the beam. The objective of this analysis is to compare structural compliances as a basis for selecting the optimal beam shape.</strong></p></div>
+        </div>
+        <div class="cell" style="--l:2.58%; --w:92.05%; --t:3.44%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:29.17%">
+              <div class="stack">
+                <div class="cell" style="--l:4.40%; --w:95.60%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-10.jpg" width="1187" height="497" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:0%; --w:100%; --t:4.80%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-14.jpg" width="1301" height="479" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:26.40%; --w:34%; --t:2.80%">
+                  <div class="text body a-center"><p><strong>Shape 1: Arch</strong></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:4.78%; --w:32.09%; --t:0.70%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-11.jpg" width="1459" height="499" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:0%; --w:95.27%; --t:1.45%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-13.jpg" width="1237" height="505" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:32%; --w:30.91%; --t:0%">
+                  <div class="text body a-center"><p><strong>Shape 2: Mix</strong></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:2.68%; --w:31.27%; --t:0.82%">
+              <div class="stack">
+                <div class="cell" style="--l:10.45%; --w:85.07%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-12.jpg" width="1209" height="498" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:0%; --w:100%; --t:4.10%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-15.jpg" width="1065" height="441" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:29.85%; --w:31.72%; --t:0%">
+                  <div class="text body a-center"><p><strong>Shape 3: Truss</strong></p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:15.36%; --w:64.77%; --t:4.08%">
+          <div class="table-wrap"><table class="data">
+<caption><strong>Summarized FEA Results</strong></caption>
+<tr><th></th><th><strong>Shape 1: Arch</strong></th><th><strong>Shape 2: Mix</strong></th><th><strong>Shape 3: Truss</strong></th></tr>
+<tr><td><strong>Von Misses Stress (MPa)</strong></td><td><strong>189.317</strong></td><td><strong>126.886</strong></td><td><strong>102.514</strong></td></tr>
+<tr><td><strong>Max Deflection (mm)</strong></td><td><strong>0.971</strong></td><td><strong>0.505</strong></td><td><strong>0.426</strong></td></tr>
+<tr><td><strong>Structural Compliance</strong><br><strong>(Defl/Load) (mm/kN)</strong></td><td><strong>0.013638</strong></td><td><strong>0.00709</strong></td><td><strong>0.005983</strong></td></tr>
+</table></div>
+        </div>
+        <div class="cell" style="--l:16.22%; --w:63.80%; --t:4.42%">
+          <div class="text body a-justify"><p><strong>Since shape 3 experiences the lowest structural compliance while also exhibiting the lowest Von Mises stress, it is selected as the UHPC element shape.</strong></p></div>
+        </div>
+        <div class="cell" style="--l:18.80%; --w:37.81%; --t:2.90%">
+          <h2 class="section-title a-left">5. Final Design Details</h2>
+        </div>
+        <div class="cell" style="--l:10.31%; --w:89.69%; --t:2.47%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:42.75%; --t:3.83%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-17.jpg" width="1795" height="1021" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:54.75%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-16.jpg" width="1396" height="794" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:14.07%; --w:69.17%; --t:1.50%">
+          <div class="text body a-justify"><p><strong>Once the final beam shape was selected, the final architectural details were added. Since the final beam shape resembled the Rialto Bridge in Venice, Italy, inspiration was drawn from it. Initially, four main details were added on to the beam, an extruded perimeter along the sides, four archangels on each side, stairs along the top of the beam, and a water pattern on the concrete cover. However, the archangels and the water pattern were later removed to simplify construction. The final volume of the beam is 0.0127 m</strong><sup><strong>3</strong></sup><strong>, a 69.3% material reduction from the initial design domain volume of 0.0413 m</strong><sup><strong>3</strong></sup><strong>.</strong></p></div>
+        </div>
+        <div class="cell" style="--l:10.31%; --w:83.24%; --t:6.44%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:51.87%">
+              <div class="stack">
+                <div class="cell" style="--l:0%; --w:100%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-18.jpg" width="1322" height="312" loading="lazy" alt=""></figure>
+                </div>
+                <div class="cell" style="--l:19.53%; --w:53.23%; --t:0%">
+                  <figure class="img"><img src="assets/img/uhpc/uhpc-20.jpg" width="389" height="675" loading="lazy" alt=""></figure>
+                </div>
+              </div>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:45.63%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-19.jpg" width="1183" height="690" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:18.47%; --w:37.81%; --t:0%">
+          <h2 class="section-title a-left">6. Mold Design / Fabrication</h2>
+        </div>
+        <div class="cell" style="--l:14.07%; --w:69.17%; --t:3.97%">
+          <div class="text body a-justify"><p><strong>Due to the complexity of the shape, we decided to fully 3D print the mold. We designed it so that it can be assembled and dissasembled in pieces, like a 3D puzzle. In the end, 42 panels and 2 supports were printed to create the mold. </strong></p></div>
+        </div>
+        <div class="cell" style="--l:0%; --w:94.74%; --t:3.65%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:49.55%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-21.jpg" width="1495" height="756" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:47.95%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-22.jpg" width="1611" height="773" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:3.87%; --w:89.69%; --t:0%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:32.34%; --t:4.31%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-24.jpg" width="924" height="780" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:36.78%; --t:6.71%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-25.jpg" width="3268" height="1697" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:4.19%; --w:24.19%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-23.jpg" width="2262" height="3360" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:18.69%; --w:50.91%; --t:3.33%">
+          <h2 class="section-title a-left">7. UHPC Casting / Demolding</h2>
+        </div>
+        <div class="cell" style="--l:14.07%; --w:69.17%; --t:4.08%">
+          <div class="text body a-justify"><p><strong>Since the mold was designed in pieces, we were able to cast the concrete layer by layer, stomping and vibrating the concrete as we built upwards. Plastic tape was used on certain interior seams to reduce the amount of leakage. We let the concrete sit for 3 days before demolding and then let it cure for 25 days in a curing room. Three concrete cubes were also made for compressive testing.</strong></p></div>
+        </div>
+        <div class="cell" style="--l:4.30%; --w:91.51%; --t:2.15%">
+          <div class="grid" style="--cols:3; --ar:1.7751"><figure class="img"><img src="assets/img/uhpc/uhpc-26.jpg" width="4026" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-27.jpg" width="4026" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-28.jpg" width="2641" height="1488" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-29.jpg" width="4026" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-30.jpg" width="4032" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-31.jpg" width="4026" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-32.jpg" width="4026" height="2268" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-33.jpg" width="4032" height="2271" loading="lazy" alt=""></figure><figure class="img"><img src="assets/img/uhpc/uhpc-34.jpg" width="4026" height="2268" loading="lazy" alt=""></figure></div>
+        </div>
+        <div class="cell" style="--l:18.47%; --w:59.40%; --t:7.52%">
+          <h2 class="section-title a-left">8. Failure Prediction / Experimental Results</h2>
+        </div>
+        <div class="cell" style="--l:7.30%; --w:81.63%; --t:3.97%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:59.34%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-35.jpg" width="1543" height="445" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:38.16%">
+              <div class="text body a-justify"><p><strong>Unfortunately, we designed the rebar to extend all the way to the support points with a sharp bend (dark grey) and during construction realized that this would be impossible to create. Thus leaving us with the rebar unable to extend to the supports, which ended up governing the failure mode. In the end the beam was able to carry up to 44.48 kN (10 kips) before failing.</strong></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:8.38%; --w:80.56%; --t:4.08%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:56.93%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-36.jpg" width="1039" height="540" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:4.13%; --w:38.93%">
+              <figure class="img"><img src="assets/img/uhpc/uhpc-37.jpg" width="2160" height="1642" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:16.54%; --w:64.12%; --t:2.69%">
+          <div class="text body a-justify"><p><strong>Although our beam did not perform up to its expectations, this whole experience has taught us a lot about UHPC design, as well as designing for construction. We are very glad to have attended the 4IIS-UHPC and had the opportunity to speak to so many talented engineers, researchers, students, and contractors in the UHPC industry</strong></p></div>
+        </div>
+      </div>
+      </section>
+      <footer><a href="#top" class="back-to-top">&uarr; Back to Top</a></footer>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

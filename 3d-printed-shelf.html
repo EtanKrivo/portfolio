@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etan Krivorot - 3D Printed Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="project-page">
+  <div class="site">
+    <aside class="sidebar">
+      <a class="logo" href="index.html">Etan <br>Krivorot</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav>
+      <ul class="pages">
+        <li class="page-title"><a href="about.html">About</a></li>
+        <li class="page-title"><a href="cv.html">Curriculum Vitae</a></li>
+        <li class="page-title"><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="gallery-title"><a href="index.html">Projects</a></p>
+      <ul class="projects">
+        <li><a href="viking-chairs.html">Viking Chairs</a></li>
+        <li><a href="gcode-shade.html">G-Code Shade</a></li>
+        <li><a href="uhpc-beam.html">UHPC Beam</a></li>
+        <li><a href="3d-printed-shelf.html" class="active">3D Printed Shelf</a></li>
+        <li><a href="masp-redesign.html">MASP Redesign</a></li>
+        <li><a href="cube.html">Cube</a></li>
+        <li><a href="reusable-gazebo.html">Reusable Gazebo</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+      </nav>
+    </aside>
+    <main>
+      <header class="page-header">
+        <h1>3D printed Shelf Bracket Design Using Topology Optimization</h1><p class="subtitle">A Personal Project</p>
+      </header>
+      <section class="content project p-shelf">
+      <div class="stack">
+        <div class="cell" style="--l:17.99%; --w:72.62%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:52.24%">
+              <figure class="img"><img src="assets/img/shelf/shelf-01.jpg" width="1428" height="746" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:5.03%; --w:42.73%">
+              <div class="text body a-justify"><p>I have been wanting a bookshelf for a long time so when I came around to brainstorming ideas, I knew I wanted a unique and interesting form to hold my favourite books. After learning the basics of topology optimization in class, I realized it would work perfectly to create an interesting and natural looking shelf bracket design.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:10.04%; --w:52.67%; --t:5.61%">
+          <h2 class="section-title a-left">1. Shelf bracket design</h2>
+        </div>
+        <div class="cell" style="--l:1.56%; --w:92.70%; --t:2.95%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:52.88%">
+              <figure class="img"><img src="assets/img/shelf/shelf-02.jpg" width="1254" height="710" loading="lazy" alt=""><span class="rule" style="left:65.52%; top:67.08%; width:15.97%; height:11.27%; --c:#000000; --a:111deg"></span><span class="rule" style="left:44.64%; top:69.77%; width:14.34%; height:11.27%; --c:#000000; --a:53deg"></span><span class="label" style="left:57.45%; top:85.60%; width:13.19%">Supports</span><span class="label" style="left:44.95%; top:0.47%; width:13.19%">Loads</span><span class="rule" style="left:39.88%; top:11.94%; width:9.01%; height:11.27%; --c:#000000; --a:127deg"></span><span class="rule" style="left:44.52%; top:28.89%; width:26.06%; height:11.27%; --c:#000000; --a:73deg"></span><span class="label" style="left:68.35%; top:5.48%; width:25.53%">Design Domain 2</span><span class="rule" style="left:66.31%; top:21.51%; width:15.97%; height:11.27%; --c:#000000; --a:126deg"></span><span class="label" style="left:8.51%; top:10.23%; width:25.53%">Design Domain 1</span><span class="rule" style="left:14.46%; top:28.62%; width:17.95%; height:11.27%; --c:#000000; --a:-127deg"></span></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:44.62%; --t:2.59%">
+              <div class="text body a-justify"><p>I wanted to create two types of shelf brackets for a bit of variety, one type to support the bookshelf from below and the other from above. The supports represent the wood posts and the load represents the weight of the shelf istelf. The design domain dimensions are set to the limits of what my 3D printer can make in a single job. A Young&#x27;s Modulus of 2 GPa and a poisson ratio of 0.33 were set to simulate the behaviour of PLA. The final output was then post designed by adding in drill holes and flattening the bases of the brackets.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:3.52%; --w:90.74%; --t:0.87%">
+          <figure class="img"><img src="assets/img/shelf/shelf-03.jpg" width="7379" height="1707" loading="lazy" alt=""></figure>
+        </div>
+        <div class="cell" style="--l:1.56%; --w:98.44%; --t:5.87%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:41.46%">
+              <figure class="img"><img src="assets/img/shelf/shelf-04.jpg" width="1197" height="746" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:9.93%; --w:48.61%; --t:2.52%">
+              <figure class="img"><img src="assets/img/shelf/shelf-05.jpg" width="1224" height="660" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:3.52%; --w:52.67%; --t:0%">
+          <h2 class="section-title a-left">2. Results</h2>
+        </div>
+        <div class="cell" style="--l:0%; --w:100%; --t:5.76%">
+          <div class="row">
+            <div class="cell" style="--l:0%; --w:33.51%">
+              <figure class="img"><img src="assets/img/shelf/shelf-06.jpg" width="2876" height="2160" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:30.49%">
+              <figure class="img"><img src="assets/img/shelf/shelf-07.jpg" width="2832" height="2160" loading="lazy" alt=""></figure>
+            </div>
+            <div class="cell" style="--l:2.50%; --w:31.01%">
+              <figure class="img"><img src="assets/img/shelf/shelf-08.jpg" width="2876" height="2160" loading="lazy" alt=""></figure>
+            </div>
+          </div>
+        </div>
+        <div class="cell" style="--l:16.17%; --w:68.19%; --t:2.74%">
+          <figure class="img"><img src="assets/img/shelf/shelf-09.jpg" width="2875" height="1984" loading="lazy" alt=""></figure>
+        </div>
+      </div>
+      </section>
+      <footer><a href="#top" class="back-to-top">&uarr; Back to Top</a></footer>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
