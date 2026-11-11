@@ -598,7 +598,7 @@ footer {
 @media (max-width: 760px) {
   /* two-column blocks with a phone-only reading order (set per widget by the generator, --o) */
   .row.phone-reorder { display: flex; flex-direction: column; }
-  .row.phone-reorder > .cell,
+  .row.phone-reorder > .cell:has(> .stack),
   .row.phone-reorder .stack { display: contents; }
   .row.phone-reorder .cell { order: var(--o, 99); margin-top: 16px; }
   .row.phone-reorder .cell[style*="--o:0"] { margin-top: 0; }
